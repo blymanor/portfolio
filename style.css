@@ -12,6 +12,18 @@ body {
     background-color: #fef7ed;
 }
 
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
@@ -84,6 +96,7 @@ body {
 .hero-text {
     text-align: center;
     order: 2;
+    space-y: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -459,20 +472,4 @@ body {
 
 .section-bg {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(254, 247, 237, 0.5), white);
-}
-
-.education-container {
-    max-width: 1024px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 10;
-}
-
-.section-title {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 4rem;
-    color: #000
+    inset:
