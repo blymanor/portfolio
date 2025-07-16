@@ -849,6 +849,21 @@ body {
     margin: 0 auto;
 }
 
+.projects-section .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.projects-section .section-subtitle {
+    font-size: 1.25rem;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
