@@ -279,5 +279,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', debouncedScroll);
     
-    console.log('Portfolio website loaded successfully! 🎉');
+    console.log('Portfolio website loaded successfully!');
 });
