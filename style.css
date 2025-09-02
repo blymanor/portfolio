@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -933,7 +934,7 @@ body {
 
 .project-content {
     padding: 1.5rem;
-    text-align: left; /* Changed from center to left */
+    text-align: center; 
 }
 
 .project-title {
@@ -941,18 +942,18 @@ body {
     font-weight: 700;
     color: #2563eb;
     margin-bottom: 0.5rem;
-    text-align: left; /* Added explicit left alignment */
+    text-align: center; 
 }
 
 .project-description {
     color: #4b5563;
     margin-bottom: 1rem;
-    text-align: left; /* Added explicit left alignment */
+    text-align: left; 
 }
 
 .project-tools {
     margin-bottom: 1rem;
-    text-align: left; /* Added explicit left alignment */
+    text-align: left; 
 }
 
 .tools-label {
@@ -960,14 +961,14 @@ body {
     font-weight: 500;
     color: #6b7280;
     margin-bottom: 0.5rem;
-    text-align: left; /* Added explicit left alignment */
+    text-align: left;
 }
 
 .tools-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    justify-content: flex-start; /* Changed from default to flex-start */
+    justify-content: default;
 }
 
 .tool-tag {
