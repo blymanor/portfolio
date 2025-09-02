@@ -1,4 +1,3 @@
-// Typing effect for occupation section
 document.addEventListener('DOMContentLoaded', function() {
     let currentJob = 0;
     const jobs = ["UX/UI Designer", "Frontend Developer"];
