@@ -1,961 +1,385 @@
 <!DOCTYPE html>
-<html lang="th">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechTalent - เว็บไซต์สมัครงาน</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-    <style>
-        body {
-            font-family: 'Kanit', sans-serif;
-            background-color: #f8fafc
-        }
-
-        .nav-link.active {
-            color: #1d4ed8;
-            font-weight: 600;
-            border-bottom: 2px solid #1d4ed8
-        }
-
-        .page-section {
-            display: none
-        }
-
-        .page-section.active {
-            display: block
-        }
-
-        .modal-backdrop {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, .5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000
-        }
-
-        .modal-content {
-            background: #fff;
-            border-radius: .75rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, .15)
-        }
-
-        .no-scroll {
-            overflow: hidden
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipparida Rujisunkuntorn - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="text-gray-800">
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-blue-700 nav-link" data-target="home">TechTalent</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-700 hover:text-blue-700 transition"
-                    data-target="home">หน้าแรก</a>
-                <a href="#training" class="nav-link text-gray-700 hover:text-blue-700 transition"
-                    data-target="training">อบรม/สัมมนา</a>
-                <a href="#about" class="nav-link text-gray-700 hover:text-blue-700 transition"
-                    data-target="about">เกี่ยวกับเรา</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none"
-                aria-controls="mobile-menu" aria-expanded="false" aria-label="เมนูบนมือถือ">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
-            <a href="#home" class="block py-2 nav-link text-gray-700 hover:text-blue-700" data-target="home">หน้าแรก</a>
-            <a href="#training" class="block py-2 nav-link text-gray-700 hover:text-blue-700"
-                data-target="training">อบรม/สัมมนา</a>
-            <a href="#about" class="block py-2 nav-link text-gray-700 hover:text-blue-700"
-                data-target="about">เกี่ยวกับเรา</a>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Background decorative elements -->
+        <div class="bg-decoration">
+            <div class="bg-circle bg-circle-1"></div>
+            <div class="bg-circle bg-circle-2"></div>
+            <div class="bg-circle bg-circle-3"></div>
         </div>
-    </header>
 
-    <!-- Main -->
-    <main class="container mx-auto px-6 py-12">
-        <!-- Home -->
-        <section id="home" class="page-section active" aria-labelledby="homeHeading">
-            <h1 id="homeHeading" class="text-3xl font-bold mb-8 text-center">ตำแหน่งงานที่น่าสนใจ</h1>
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <!-- Job Card 1 -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition cursor-pointer job-card"
-                    data-job="software-developer">
-                    <h3 class="text-xl font-semibold text-blue-700">Software Developer</h3>
-                    <p class="text-gray-500 mb-4">Chilindo Co., Ltd. - บางนา</p>
-                    <p class="text-sm mb-4">
-                        พัฒนาแอปพลิเคชันคุณภาพสูงเพื่อสนับสนุนกระบวนการทางธุรกิจหลักตามความต้องการของผู้ใช้
-                        มีความรู้ในภาษา C#/.NET/ASP หรือ OOP อื่นๆ</p>
-                    <div class="text-lg font-bold text-green-600 mb-2">80,000 - 200,000 THB/เดือน</div>
-                    <div class="text-blue-600 text-sm font-medium">คลิกเพื่อดูรายละเอียด</div>
-                </article>
-                <!-- Job Card 2 -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition cursor-pointer job-card"
-                    data-job="frontend-developer">
-                    <h3 class="text-xl font-semibold text-blue-700">Frontend Developer</h3>
-                    <p class="text-gray-500 mb-4">Creative Tech Inc. - สุขุมวิท</p>
-                    <p class="text-sm mb-4">ออกแบบและพัฒนา UI ที่สวยงาม ตอบสนองดี เชี่ยวชาญ React/Vue/Angular และหลักการ
-                        UI/UX</p>
-                    <div class="text-lg font-bold text-green-600 mb-2">75,000 - 150,000 THB/เดือน</div>
-                    <div class="text-blue-600 text-sm font-medium">คลิกเพื่อดูรายละเอียด</div>
-                </article>
-                <!-- Job Card 3 -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition cursor-pointer job-card"
-                    data-job="data-scientist">
-                    <h3 class="text-xl font-semibold text-blue-700">Data Scientist</h3>
-                    <p class="text-gray-500 mb-4">Data Insights Corp. - สีลม</p>
-                    <p class="text-sm mb-4">วิเคราะห์ข้อมูลขนาดใหญ่ สร้างโมเดล Machine Learning ใช้ Python (Pandas,
-                        Scikit-learn) และ SQL</p>
-                    <div class="text-lg font-bold text-green-600 mb-2">90,000 - 180,000 THB/เดือน</div>
-                    <div class="text-blue-600 text-sm font-medium">คลิกเพื่อดูรายละเอียด</div>
-                </article>
-            </div>
-
-            <!-- Registration Form -->
-            <h2 class="text-3xl font-bold mb-8 text-center">ลงทะเบียนสมัครงาน</h2>
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
-                <form id="registrationForm" novalidate>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="fname" class="block mb-2 font-medium">ชื่อจริง</label>
-                            <input id="fname" name="firstname" type="text" placeholder="สมชาย"
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" />
-                            <p class="text-red-500 text-sm mt-1 error-message"></p>
-                        </div>
-                        <div>
-                            <label for="lname" class="block mb-2 font-medium">นามสกุล</label>
-                            <input id="lname" name="lastname" type="text" placeholder="รักดี"
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" />
-                            <p class="text-red-500 text-sm mt-1 error-message"></p>
-                        </div>
-                        <div class="md:col-span-2">
-                            <label for="email" class="block mb-2 font-medium">อีเมล</label>
-                            <input id="email" name="email" type="email" placeholder="example@mail.com"
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" />
-                            <p class="text-red-500 text-sm mt-1 error-message"></p>
-                        </div>
-                        <div>
-                            <label for="phone" class="block mb-2 font-medium">เบอร์โทรศัพท์</label>
-                            <input id="phone" name="phone" type="tel" placeholder="08xxxxxxxx"
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" />
-                            <p class="text-red-500 text-sm mt-1 error-message"></p>
-                        </div>
-                        <div>
-                            <label for="education" class="block mb-2 font-medium">ระดับการศึกษา</label>
-                            <select id="education" name="education"
-                                class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                                <option value="">-- เลือกระดับการศึกษา --</option>
-                                <option value="highschool">มัธยมศึกษาตอนปลาย</option>
-                                <option value="diploma">อนุปริญญา / ปวส.</option>
-                                <option value="bachelor">ปริญญาตรี</option>
-                                <option value="master">ปริญญาโท</option>
-                                <option value="phd">ปริญญาเอก</option>
-                            </select>
-                            <p class="text-red-500 text-sm mt-1 error-message"></p>
-                        </div>
-                        <div class="md:col-span-2">
-                            <label for="address" class="block mb-2 font-medium">ที่อยู่</label>
-                            <textarea id="address" name="address" rows="4" placeholder="ที่อยู่ปัจจุบัน"
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"></textarea>
-                            <p class="text-red-500 text-sm mt-1 error-message"></p>
-                        </div>
+        <div class="hero-container">
+            <!-- Text Content -->
+            <div class="hero-text">
+                <!-- Main Name -->
+                <div class="name-section">
+                    <div class="name-container">
+                        <h1 class="main-name">
+                            <span class="first-name">Tipparida</span>
+                            <span class="last-name">Rujisunkuntorn</span>
+                        </h1>
+                        <!-- Decorative line -->
+                        <div class="decorative-line"></div>
                     </div>
-                    <div class="text-center mt-8">
-                        <button type="submit"
-                            class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition text-lg">ส่งข้อมูล</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <!-- Training -->
-        <section id="training" class="page-section" aria-labelledby="trainingHeading">
-            <h1 id="trainingHeading" class="text-3xl font-bold mb-8 text-center">คอร์สอบรมและสัมมนา</h1>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Cards -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=PHP+%26+MySQL" alt="PHP & MySQL Course"
-                        class="w-full h-48 object-cover group-hover:opacity-80 transition" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">PHP & MySQL Database Web Programming</h3>
-                        <p class="text-gray-600 text-sm mb-4">สร้างเว็บไซต์ที่ทำงานกับฐานข้อมูลได้อย่างเต็มรูปแบบ (32
-                            ชั่วโมง 7,500 บาท)</p>
-                        <button class="text-blue-600 font-semibold hover:underline course-detail-btn"
-                            data-course="php-mysql">ดูรายละเอียดเพิ่มเติม</button>
+                    
+                    <!-- Nickname -->
+                    <div class="nickname-container">
+                        <p class="nickname-text">
+                            You can call me <span class="nickname-highlight">Pleng</span>
+                        </p>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img src="https://placehold.co/600x400/f59e0b/ffffff?text=React+JS" alt="React JS Course"
-                        class="w-full h-48 object-cover group-hover:opacity-80 transition" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Modern Frontend with React.js</h3>
-                        <p class="text-gray-600 text-sm mb-4">สร้าง SPA ที่ทันสมัย (40 ชั่วโมง 9,500 บาท)</p>
-                        <button class="text-blue-600 font-semibold hover:underline course-detail-btn"
-                            data-course="react-js">ดูรายละเอียดเพิ่มเติม</button>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img src="https://placehold.co/600x400/10b981/ffffff?text=Data+Science" alt="Data Science"
-                        class="w-full h-48 object-cover group-hover:opacity-80 transition" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Data Science Bootcamp with Python</h3>
-                        <p class="text-gray-600 text-sm mb-4">Python + ML (60 ชั่วโมง 15,000 บาท)</p>
-                        <button class="text-blue-600 font-semibold hover:underline course-detail-btn"
-                            data-course="data-science">ดูรายละเอียดเพิ่มเติม</button>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Agile+%26+Scrum" alt="Agile"
-                        class="w-full h-48 object-cover group-hover:opacity-80 transition" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Agile Project Management & Scrum</h3>
-                        <p class="text-gray-600 text-sm mb-4">บริหารโครงการแบบ Agile (16 ชั่วโมง 6,000 บาท)</p>
-                        <button class="text-blue-600 font-semibold hover:underline course-detail-btn"
-                            data-course="agile">ดูรายละเอียดเพิ่มเติม</button>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img src="https://placehold.co/600x400/ec4899/ffffff?text=UI/UX+Design" alt="UI/UX"
-                        class="w-full h-48 object-cover group-hover:opacity-80 transition" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">UI/UX Design for Beginners</h3>
-                        <p class="text-gray-600 text-sm mb-4">ปูพื้น UX ครบเครื่อง (30 ชั่วโมง 8,000 บาท)</p>
-                        <button class="text-blue-600 font-semibold hover:underline course-detail-btn"
-                            data-course="ui-ux">ดูรายละเอียดเพิ่มเติม</button>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group">
-                    <img src="https://placehold.co/600x400/f97316/ffffff?text=DevOps" alt="DevOps"
-                        class="w-full h-48 object-cover group-hover:opacity-80 transition" />
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Introduction to DevOps</h3>
-                        <p class="text-gray-600 text-sm mb-4">Dev + Ops + CI/CD (24 ชั่วโมง 7,500 บาท)</p>
-                        <button class="text-blue-600 font-semibold hover:underline course-detail-btn"
-                            data-course="devops">ดูรายละเอียดเพิ่มเติม</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About -->
-        <section id="about" class="page-section" aria-labelledby="aboutHeading">
-            <h1 id="aboutHeading" class="text-3xl font-bold mb-8 text-center">เกี่ยวกับเรา</h1>
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-2xl font-bold text-blue-700 mb-4">บริษัท เทคทาเลนท์ จำกัด</h2>
-                    <p class="text-gray-600 mb-6">
-                        เราคือแพลตฟอร์มจัดหางานชั้นนำที่เชื่อมโยงผู้มีความสามารถด้านเทคโนโลยีเข้ากับองค์กรที่ดีที่สุด
-                        ภารกิจของเราคือการสร้างโอกาสและขับเคลื่อนวงการเทคโนโลยีของประเทศให้เติบโตอย่างยั่งยืน</p>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-4"></i>
-                            <span><strong class="block">ที่อยู่:</strong> 9/1 หมู่ 5 ถนนพหลโยธิน ตำบลคลองหนึ่ง
-                                อำเภอคลองหลวง ปทุมธานี 12120</span>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-user text-blue-600 mt-1 mr-4"></i>
-                            <span><strong class="block">ผู้ติดต่อ:</strong> อิงค์นภ และทิพย์ปาลิดา</span>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-envelope text-blue-600 mt-1 mr-4"></i>
-                            <span><strong class="block">อีเมล:</strong> ingnop.kunr@gbumail.net,
-                                tipparida.ruji@bumail.net</span>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-phone text-blue-600 mt-1 mr-4"></i>
-                            <span><strong class="block">เบอร์โทรศัพท์:</strong> 08x-xxx-xxxx, 085-042-8955</span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 text-center">ติดต่อเรา</h3>
-                    <form id="contactForm" novalidate>
-                        <div class="mb-4">
-                            <label for="contact_name" class="block mb-2 font-medium">ชื่อ</label>
-                            <input id="contact_name" name="contact_name" type="text"
-                                class="w-full p-3 border border-gray-300 rounded-lg" placeholder="ชื่อของคุณ" />
-                            <p class="text-red-500 text-sm mt-1 error-message"></p>
-                        </div>
-                        <div class="mb-4">
-                            <label for="contact_email" class="block mb-2 font-medium">อีเมล</label>
-                            <input id="contact_email" name="contact_email" type="email"
-                                class="w-full p-3 border border-gray-300 rounded-lg" placeholder="อีเมลของคุณ" />
-                            <p class="text-red-500 text-sm mt-1 error-message"></p>
-                        </div>
-                        <div class="mb-4">
-                            <label for="contact_subject" class="block mb-2 font-medium">เรื่อง</label>
-                            <textarea id="contact_subject" name="contact_subject" rows="4"
-                                class="w-full p-3 border border-gray-300 rounded-lg"
-                                placeholder="เขียนข้อความของคุณที่นี่..."></textarea>
-                            <p class="text-red-500 text-sm mt-1 error-message"></p>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition">ส่งข้อความ</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== Course Detail Pages ===== -->
-        <!-- PHP & MySQL -->
-        <section id="course-php-mysql" class="page-section">
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
-                <button class="mb-6 bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition"
-                    onclick="showPage('training')">← กลับสู่หน้าคอร์สอบรม</button>
-                <h1 class="text-3xl font-bold mb-6 text-blue-700">PHP & MySQL Database Web Programming</h1>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=PHP+%26+MySQL"
-                            alt="PHP & MySQL Course" class="w-full h-48 object-cover rounded-lg mb-6" />
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4">ข้อมูลคอร์ส</h3>
-                            <div class="space-y-2">
-                                <p><strong>ระยะเวลา:</strong> 32 ชั่วโมงเต็ม (4 วัน วันละ 8 ชั่วโมง)</p>
-                                <p><strong>รูปแบบ:</strong> Onsite + Online Support</p>
-                                <p><strong>ราคา:</strong> 7,500 บาท</p>
-                                <p><strong>ผู้สอน:</strong> ผู้เชี่ยวชาญด้าน Web Development</p>
+                
+                <!-- Occupation with typing effect -->
+                <div class="occupation-section">
+                    <div class="occupation-text">
+                        <span>I'm interested in</span>
+                        <div class="typing-container">
+                            <div class="typing-box">
+                                <div class="typing-wrapper" id="typingWrapper">
+                                    <div class="typing-item">UX/UI Designer</div>
+                                    <div class="typing-item">Frontend Developer</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">ภาพรวมคอร์ส</h3>
-                        <p class="text-gray-600 mb-6">สร้างเว็บไซต์ที่ทำงานกับฐานข้อมูลได้อย่างเต็มรูปแบบ
-                            เป็นคอร์สยอดนิยมสำหรับมือใหม่ที่ต้องการต่อยอดสู่การพัฒนาเว็บระดับ Production</p>
-                        <h4 class="text-lg font-semibold mb-2">เหมาะกับใครบ้าง</h4>
-                        <p class="text-gray-600 mb-4">มือใหม่ หรือผู้ที่เคยเขียน HTML/CSS
-                            แล้วอยากทำเว็บที่มีฟังก์ชันซับซ้อน</p>
-                        <div class="mt-6"><button
-                                class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">สมัครเรียนเลย</button>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-section">
+                    <div class="contact-container">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-label">Get in touch</p>
+                            <a href="mailto:tipparida.ruji@gmail.com" class="contact-email">
+                                tipparida.ruji@gmail.com
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- React.js -->
-        <section id="course-react-js" class="page-section">
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
-                <button class="mb-6 bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition"
-                    onclick="showPage('training')">← กลับสู่หน้าคอร์สอบรม</button>
-                <h1 class="text-3xl font-bold mb-6 text-blue-700">Modern Frontend with React.js</h1>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://placehold.co/600x400/f59e0b/ffffff?text=React+JS" alt="React JS Course"
-                            class="w-full h-48 object-cover rounded-lg mb-6" />
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4">ข้อมูลคอร์ส</h3>
-                            <div class="space-y-2">
-                                <p><strong>ระยะเวลา:</strong> 40 ชั่วโมง (5 วัน วันละ 8 ชั่วโมง)</p>
-                                <p><strong>รูปแบบ:</strong> Onsite + Hands-on Workshop</p>
-                                <p><strong>ราคา:</strong> 9,500 บาท</p>
-                                <p><strong>ผู้สอน:</strong> ผู้เชี่ยวชาญด้าน Frontend</p>
+            <!-- Profile Image -->
+            <div class="profile-section">
+                <div class="profile-container">
+                    <!-- Animated background circles -->
+                    <div class="profile-bg profile-bg-1"></div>
+                    <div class="profile-bg profile-bg-2"></div>
+                    <div class="profile-bg profile-bg-3"></div>
+                    
+                    <!-- Main image container -->
+                    <div class="profile-image-container">
+                        <div class="profile-image-inner">
+                            <div class="profile-image-wrapper">
+                                <img src="https://raw.githubusercontent.com/blymanor/portfolio-image/main/self.jpeg" alt="Tipparida Rujisunkuntorn" class="profile-image">
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">ภาพรวมคอร์ส</h3>
-                        <p class="text-gray-600 mb-6">เรียนรู้การสร้าง Single Page Application ที่ทันสมัย เข้าใจ Hooks,
-                            Router, State Management และการเชื่อมต่อ API</p>
-                        <h4 class="text-lg font-semibold mb-2">เหมาะกับใครบ้าง</h4>
-                        <p class="text-gray-600 mb-4">ผู้มีพื้นฐาน JavaScript และ HTML/CSS ที่อยากก้าวสู่สาย Frontend
-                            เต็มตัว</p>
-                        <div class="mt-6"><button
-                                class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">สมัครเรียนเลย</button>
-                        </div>
+                    
+                    <!-- Floating elements -->
+                    <div class="floating-element floating-p">
+                        <span>P</span>
+                    </div>
+                    
+                    <div class="floating-element floating-t">
+                        <span>T</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Data Science -->
-        <section id="course-data-science" class="page-section">
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
-                <button class="mb-6 bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition"
-                    onclick="showPage('training')">← กลับสู่หน้าคอร์สอบรม</button>
-                <h1 class="text-3xl font-bold mb-6 text-blue-700">Data Science Bootcamp with Python</h1>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://placehold.co/600x400/22c55e/ffffff?text=Data+Science"
-                            alt="Data Science Bootcamp with Python" class="w-full h-48 object-cover rounded-lg mb-6" />
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4">ข้อมูลคอร์ส</h3>
-                            <div class="space-y-2">
-                                <p><strong>ระยะเวลา:</strong> 60 ชั่วโมง (3 สัปดาห์ สัปดาห์ละ 20 ชม.)</p>
-                                <p><strong>รูปแบบ:</strong> Hybrid + Mentoring</p>
-                                <p><strong>ราคา:</strong> 15,000 บาท</p>
-                                <p><strong>ผู้สอน:</strong> นักวิทยาศาสตร์ข้อมูลจากภาคธุรกิจ</p>
+    <!-- Education Section -->
+    <section class="education-section">
+        <div class="section-bg"></div>
+        <div class="education-container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <div class="education-content">
+                    <div class="education-icon">
+                        <span>BU</span>
+                    </div>
+                    <h3 class="university-name">Bangkok University</h3>
+                    <p class="faculty-name">Faculty of Technology and Innovation</p>
+                    <p class="degree-name">Bachelor of Science in Computer Science</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <!-- Background decoration -->
+        <div class="skills-bg-decoration">
+            <div class="skills-bg-circle skills-bg-circle-1"></div>
+            <div class="skills-bg-circle skills-bg-circle-2"></div>
+        </div>
+
+        <div class="skills-container">
+            <div class="skills-header">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-subtitle">My expertise and capabilities</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Hard Skills -->
+                <div class="skills-column">
+                    <h3 class="skills-column-title">Hard Skills</h3>
+                    
+                    <!-- Software Skills -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">💻</div>
+                            <h4 class="skill-title">Software Skills</h4>
+                        </div>
+                        
+                        <div class="skill-content">
+                            <div class="skill-level">
+                                <div class="skill-level-indicator excellent"></div>
+                                <p class="skill-level-text excellent">Excellent</p>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag excellent">Photoshop</span>
+                                <span class="skill-tag excellent">Figma</span>
+                                <span class="skill-tag excellent">Word</span>
+                                <span class="skill-tag excellent">PowerPoint</span>
+                                <span class="skill-tag excellent">CapCut</span>
+                                <span class="skill-tag excellent">Canva</span>
+                            </div>
+                            
+                            <div class="skill-level">
+                                <div class="skill-level-indicator intermediate"></div>
+                                <p class="skill-level-text intermediate">Intermediate</p>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag intermediate">Excel</span>
+                                <span class="skill-tag intermediate">Adobe Illustrator</span>
+                            </div>
+                            
+                            <div class="skill-level">
+                                <div class="skill-level-indicator basic"></div>
+                                <p class="skill-level-text basic">Basic</p>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag basic">Premiere Pro</span>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">ภาพรวมคอร์ส</h3>
-                        <p class="text-gray-600 mb-4">เริ่มตั้งแต่ Pandas, NumPy, Matplotlib, Data Cleaning,
-                            Visualization จนถึงโมเดล Supervised/Unsupervised พร้อม End-to-End Project จากเคสจริง</p>
-                        <h4 class="text-lg font-semibold mb-2">เหมาะกับใครบ้าง</h4>
-                        <ul class="list-disc pl-5 text-gray-600 mb-6 space-y-1">
-                            <li>มีพื้นฐานเขียนโปรแกรมเล็กน้อยและสนใจวิเคราะห์ข้อมูล</li>
-                            <li>ผู้ทำงานด้านข้อมูลที่อยากอัปสกิล ML</li>
-                        </ul>
-                        <div class="mt-6"><button
-                                class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">สมัครเรียนเลย</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Agile -->
-        <section id="course-agile" class="page-section">
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
-                <button class="mb-6 bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition"
-                    onclick="showPage('training')">← กลับสู่หน้าคอร์สอบรม</button>
-                <h1 class="text-3xl font-bold mb-6 text-blue-700">Agile Project Management & Scrum</h1>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://placehold.co/600x400/0ea5e9/ffffff?text=Agile+%26+Scrum" alt="Agile & Scrum"
-                            class="w-full h-48 object-cover rounded-lg mb-6" />
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4">ข้อมูลคอร์ส</h3>
-                            <div class="space-y-2">
-                                <p><strong>ระยะเวลา:</strong> 16 ชั่วโมง (2 วัน วันละ 8 ชม.)</p>
-                                <p><strong>รูปแบบ:</strong> Workshop Interactive</p>
-                                <p><strong>ราคา:</strong> 6,000 บาท</p>
-                                <p><strong>ผู้สอน:</strong> Agile Coach / Scrum Master</p>
+                    <!-- Coding Skills -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">⚡</div>
+                            <h4 class="skill-title">Coding Skills</h4>
+                        </div>
+                        
+                        <div class="skill-content">
+                            <div class="skill-level">
+                                <div class="skill-level-indicator intermediate"></div>
+                                <p class="skill-level-text intermediate">Intermediate</p>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag intermediate">Python</span>
+                                <span class="skill-tag intermediate">C#</span>
+                                <span class="skill-tag intermediate">HTML</span>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">ภาพรวมคอร์ส</h3>
-                        <p class="text-gray-600 mb-4">ปูพื้น Agile และ Scrum Framework: Sprint Planning, Daily Standup,
-                            Review/Retro และการใช้ Jira/Confluence ผ่าน Simulation Exercise</p>
-                        <h4 class="text-lg font-semibold mb-2">เหมาะกับใครบ้าง</h4>
-                        <ul class="list-disc pl-5 text-gray-600 mb-6 space-y-1">
-                            <li>Project Manager, Team Leader, สมาชิกทีมพัฒนา</li>
-                            <li>ผู้ที่ย้ายจาก Traditional PM มา Agile</li>
-                        </ul>
-                        <div class="mt-6"><button
-                                class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">สมัครเรียนเลย</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- UI/UX -->
-        <section id="course-ui-ux" class="page-section">
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
-                <button class="mb-6 bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition"
-                    onclick="showPage('training')">← กลับสู่หน้าคอร์สอบรม</button>
-                <h1 class="text-3xl font-bold mb-6 text-blue-700">UI/UX Design for Beginners</h1>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://placehold.co/600x400/a78bfa/ffffff?text=UI%2FUX+Design" alt="UI/UX Design"
-                            class="w-full h-48 object-cover rounded-lg mb-6" />
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4">ข้อมูลคอร์ส</h3>
-                            <div class="space-y-2">
-                                <p><strong>ระยะเวลา:</strong> 30 ชั่วโมง (4 วัน ~7.5 ชม.)</p>
-                                <p><strong>รูปแบบ:</strong> Hands-on + Portfolio Review</p>
-                                <p><strong>ราคา:</strong> 8,000 บาท</p>
-                                <p><strong>ผู้สอน:</strong> Product Designer / UX Researcher</p>
+                    <!-- Language Skills -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">🌐</div>
+                            <h4 class="skill-title">Language Skills</h4>
+                        </div>
+                        
+                        <div class="skill-content">
+                            <div class="language-item">
+                                <span class="language-name">Thai</span>
+                                <span class="language-level">Native</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">English</span>
+                                <span class="language-level">CEFR B1</span>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">ภาพรวมคอร์ส</h3>
-                        <p class="text-gray-600 mb-4">ตั้งแต่ User Research, Persona, Journey, Wireframe, Prototype ถึง
-                            Usability Testing ใช้ Figma เป็นหลัก ทำโปรเจกต์จริงเพื่อพอร์ต</p>
-                        <h4 class="text-lg font-semibold mb-2">เหมาะกับใครบ้าง</h4>
-                        <ul class="list-disc pl-5 text-gray-600 mb-6 space-y-1">
-                            <li>ผู้เริ่มต้นสาย UI/UX</li>
-                            <li>นักพัฒนาที่อยากเข้าใจงานดีไซน์</li>
-                            <li>ผู้ทำผลิตภัณฑ์ดิจิทัลที่ต้องการยกระดับ UX</li>
-                        </ul>
-                        <div class="mt-6"><button
-                                class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">สมัครเรียนเลย</button>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- DevOps -->
-        <section id="course-devops" class="page-section">
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-5xl mx-auto">
-                <button class="mb-6 bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded transition"
-                    onclick="showPage('training')">← กลับสู่หน้าคอร์สอบรม</button>
-                <h1 class="text-3xl font-bold mb-6 text-blue-700">Introduction to DevOps</h1>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <img src="https://placehold.co/600x400/f97316/ffffff?text=DevOps+Basics" alt="DevOps"
-                            class="w-full h-48 object-cover rounded-lg mb-6" />
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <h3 class="text-xl font-semibold mb-4">ข้อมูลคอร์ส</h3>
-                            <div class="space-y-2">
-                                <p><strong>ระยะเวลา:</strong> 24 ชั่วโมง (3 วัน วันละ 8 ชม.)</p>
-                                <p><strong>รูปแบบ:</strong> Lab-based + Real Environment</p>
-                                <p><strong>ราคา:</strong> 7,500 บาท</p>
-                                <p><strong>ผู้สอน:</strong> DevOps Engineer / Cloud Practitioner</p>
+                <!-- Soft Skills -->
+                <div class="skills-column">
+                    <h3 class="skills-column-title">Soft Skills</h3>
+                    
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <div class="skill-icon">✨</div>
+                            <h4 class="skill-title">Personal Qualities</h4>
+                        </div>
+                        
+                        <div class="skill-content">
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-number">1</div>
+                                <p class="soft-skill-text">Strong communication and teamwork skills</p>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-number">2</div>
+                                <p class="soft-skill-text">Responsible with good time management</p>
+                            </div>
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-number">3</div>
+                                <p class="soft-skill-text">Fast learner and highly adaptable</p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">ภาพรวมคอร์ส</h3>
-                        <p class="text-gray-600 mb-4">ครอบคลุม DevOps Culture & Practices, CI/CD Pipeline,
-                            Docker/Container, Cloud พื้นฐาน และ IaC พร้อมสาธิตการตั้งค่า Pipeline จริงด้วย Git/Jenkins
-                            และ Monitoring</p>
-                        <h4 class="text-lg font-semibold mb-2">เหมาะกับใครบ้าง</h4>
-                        <ul class="list-disc pl-5 text-gray-600 mb-6 space-y-1">
-                            <li>นักพัฒนาที่อยากเข้าใจกระบวนการ Deploy/Operations</li>
-                            <li>System Administrator ที่ต้องการแนวทางสมัยใหม่</li>
-                            <li>ผู้สนใจเปลี่ยนสายเป็น DevOps Engineer</li>
-                        </ul>
-                        <div class="mt-6"><button
-                                class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">สมัครเรียนเลย</button>
+
+                    <!-- Achievement highlight -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🎯</div>
+                        <h4 class="achievement-title">Ready to Create</h4>
+                        <p class="achievement-text">Passionate about designing user-centered experiences and bringing ideas to life through code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="projects-container">
+            <h2 class="section-title">My Work</h2>
+            <p class="section-subtitle">A collection of my recent work</p>            
+
+            <div class="projects-grid">
+                <!-- ASG Game -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/blymanor/portfolio-image/main/ASG-Project.png" alt="ASG Game">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ASG Game</h3>
+                        <p class="project-description">Designed comprehensive UX and UI for mobile gaming experience using Figma</p>
+                        
+                        <div class="project-tools">
+                            <p class="tools-label">Tools:</p>
+                            <div class="tools-tags">
+                                <span class="tool-tag">Figma</span>
+                            </div>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://www.figma.com/proto/xyYHKX6dWVvGWC8ZlvIdWb/UI-ASG?page-id=0%3A1&node-id=20-301&p=f&viewport=582%2C228%2C0.28&t=8eBXfV8Ka0bQ1Pmk-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=20%3A301" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Prototype
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moodkit -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/blymanor/portfolio-image/main/MoodKit-Project.png" alt="Moodkit">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Moodkit</h3>
+                        <p class="project-description">Designed and developed a comprehensive mood tracking application with intuitive user interface</p>
+                        
+                        <div class="project-tools">
+                            <p class="tools-label">Tools:</p>
+                            <div class="tools-tags">
+                                <span class="tool-tag">Figma</span>
+                                <span class="tool-tag">XAML</span>
+                                <span class="tool-tag">C#</span>
+                            </div>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://www.figma.com/proto/mWFOxUqXToT4DbF7TKxukN/MoodKit?page-id=0%3A1&node-id=2-106&p=f&viewport=118%2C159%2C0.17&t=LlBo69edjRzgtLn6-1&scaling=scale-down&content-scaling=fixed" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Prototype
+                            </a>
+                            <a href="https://github.com/blymanor/MoodKitApp.git" target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GetHealthy -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/blymanor/portfolio-image/main/GetHealthy-Project.png" alt="GetHealthy">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">GetHealthy</h3>
+                        <p class="project-description">Crafted user-centered design for health and wellness mobile application</p>
+                        
+                        <div class="project-tools">
+                            <p class="tools-label">Tools:</p>
+                            <div class="tools-tags">
+                                <span class="tool-tag">Figma</span>
+                            </div>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://www.figma.com/proto/DMSoDpl0Otf9rrxDDZvngD/GetHealthy?page-id=0%3A1&node-id=2-3&viewport=78%2C508%2C0.48&t=stgTFKXl4lekVxqE-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2%3A3" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Prototype
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Hub -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/blymanor/portfolio-image/main/Healthhub-Project.png" alt="Health Hub">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Health Hub</h3>
+                        <p class="project-description">Designed comprehensive health monitoring platform with focus on user experience</p>
+                        
+                        <div class="project-tools">
+                            <p class="tools-label">Tools:</p>
+                            <div class="tools-tags">
+                                <span class="tool-tag">Figma</span>
+                            </div>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://www.figma.com/proto/DMSoDpl0Otf9rrxDDZvngD/GetHealthy?page-id=0%3A1&node-id=2-3&viewport=78%2C508%2C0.48&t=stgTFKXl4lekVxqE-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2%3A3" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Prototype
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-16">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; 2025 TechTalent. All rights reserved.</p>
-            <p class="text-sm text-gray-400 mt-2">ออกแบบและพัฒนาโดย อิงค์นภ ขุนรา และทิพย์ปาลิดา รุจิสรรค์กุนทร</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">
+                © 2025 Tipparida Rujisunkuntorn. Thank you for visiting my portfolio!
+            </p>
         </div>
     </footer>
 
-    <!-- Message Modal -->
-    <div id="messageModal" class="modal-backdrop hidden" aria-modal="true" role="dialog" aria-labelledby="messageTitle">
-        <div class="modal-content w-[90vw] max-w-md p-6">
-            <h2 id="messageTitle" class="text-lg font-semibold mb-2">แจ้งเตือน</h2>
-            <p id="modalMessageText" class="text-gray-700"></p>
-            <div class="mt-6 text-right">
-                <button id="modalCloseButton"
-                    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">ปิด</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Job Detail Modal -->
-    <div id="jobModal" class="modal-backdrop hidden" aria-modal="true" role="dialog" aria-labelledby="jobModalTitle">
-        <div class="modal-content w-[92vw] max-w-4xl max-h-[90vh] p-6 overflow-y-auto">
-            <div class="flex justify-between items-center mb-4">
-                <h2 id="jobModalTitle" class="text-2xl font-bold text-blue-700"></h2>
-                <button id="jobModalClose" class="text-gray-500 hover:text-gray-700 text-2xl"
-                    aria-label="ปิดหน้าต่าง">&times;</button>
-            </div>
-            <div id="jobModalContent"></div>
-            <div class="mt-6 text-center">
-                <button
-                    class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">สมัครงานนี้</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // --- Helpers ---
-            const $ = (s, p = document) => p.querySelector(s);
-            const $$ = (s, p = document) => [...p.querySelectorAll(s)];
-
-            // --- Job Detail  ---
-            const jobDetails = {
-                'software-developer': {
-                    title: 'Software Developer - Chilindo Co., Ltd.',
-                    content: `
-            <div class="space-y-6">
-              <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 class="text-lg font-semibold mb-3">ข้อมูลบริษัท</h3>
-                  <p><strong>บริษัท:</strong> Chilindo Co., Ltd.</p>
-                  <p><strong>สถานที่:</strong> บางนา</p>
-                  <p><strong>วันที่ประกาศ:</strong> 01-Sep-25</p>
-                  <p><strong>เงินเดือน:</strong> 80,000-200,000 บาท/เดือน</p>
-                </div>
-                <div>
-                  <h3 class="text-lg font-semibold mb-3">ความรับผิดชอบหลัก</h3>
-                  <ul class="list-disc list-inside space-y-1 text-sm">
-                    <li>พัฒนาแอปพลิเคชันคุณภาพสูงและมีเอกสารประกอบที่ดี</li>
-                    <li>ศึกษาและประยุกต์ใช้เทคโนโลยีใหม่</li>
-                    <li>ทดสอบและปรับปรุงระบบอย่างต่อเนื่อง</li>
-                    <li>เสนอแนวทางเพิ่มประสิทธิภาพการพัฒนา</li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold mb-3">คุณสมบัติที่ต้องการ</h3>
-                <ul class="list-disc list-inside space-y-1 text-sm">
-                  <li>ปริญญาตรี/โท สาขาคอมพิวเตอร์หรือที่เกี่ยวข้อง</li>
-                  <li>มีประสบการณ์ C#/ASP/.NET หรือภาษา OOP อื่น</li>
-                  <li>คุ้นเคย Agile/SCRUM และระบบเวอร์ชันคอนโทรล (Git)</li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold mb-3">สวัสดิการ</h3>
-                <ul class="list-disc list-inside space-y-1 text-sm">
-                  <li>อุปกรณ์ทำงานพร้อม</li>
-                  <li>WFH 2 วัน/สัปดาห์</li>
-                  <li>ประกันสุขภาพกลุ่ม</li>
-                  <li>ชั่วโมงทำงานยืดหยุ่น</li>
-                </ul>
-              </div>
-            </div>`
-                },
-                'frontend-developer': {
-                    title: 'Frontend Developer - Creative Tech Inc.',
-                    content: `
-            <div class="space-y-6">
-              <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 class="text-lg font-semibold mb-3">ข้อมูลบริษัท</h3>
-                  <p><strong>บริษัท:</strong> Creative Tech Inc.</p>
-                  <p><strong>สถานที่:</strong> สุขุมวิท</p>
-                  <p><strong>วันที่ประกาศ:</strong> 01-Sep-25</p>
-                  <p><strong>เงินเดือน:</strong> 75,000-150,000 บาท/เดือน</p>
-                </div>
-                <div>
-                  <h3 class="text-lg font-semibold mb-3">ความรับผิดชอบหลัก</h3>
-                  <ul class="list-disc list-inside space-y-1 text-sm">
-                    <li>พัฒนาเว็บแอปคุณภาพสูง</li>
-                    <li>ออกแบบ UI ใช้งานง่ายและเข้าถึงได้</li>
-                    <li>ทำงานร่วมกับทีม UX/UI</li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold mb-3">คุณสมบัติที่ต้องการ</h3>
-                <ul class="list-disc list-inside space-y-1 text-sm">
-                  <li>เชี่ยวชาญ React/Vue/Angular, HTML5, CSS3, JS</li>
-                  <li>Responsive & Cross-browser</li>
-                  <li>เข้าใจ RESTful API</li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold mb-3">สวัสดิการ</h3>
-                <ul class="list-disc list-inside space-y-1 text-sm">
-                  <li>เครื่องสเปคสูง + ซอฟต์แวร์</li>
-                  <li>Hybrid (WFH 2 วัน)</li>
-                  <li>ประกันสุขภาพกลุ่ม</li>
-                </ul>
-              </div>
-            </div>`
-                },
-                'data-scientist': {
-                    title: 'Data Scientist - Data Insights Corp.',
-                    content: `
-            <div class="space-y-6">
-              <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 class="text-lg font-semibold mb-3">ข้อมูลบริษัท</h3>
-                  <p><strong>บริษัท:</strong> Data Insights Corp.</p>
-                  <p><strong>สถานที่:</strong> สีลม</p>
-                  <p><strong>วันที่ประกาศ:</strong> 01-Sep-25</p>
-                  <p><strong>เงินเดือน:</strong> 90,000-180,000 บาท/เดือน</p>
-                </div>
-                <div>
-                  <h3 class="text-lg font-semibold mb-3">ความรับผิดชอบหลัก</h3>
-                  <ul class="list-disc list-inside space-y-1 text-sm">
-                    <li>วิเคราะห์ข้อมูลขนาดใหญ่</li>
-                    <li>สร้างโมเดล ML</li>
-                    <li>ทำ Visualization และรายงานเชิงธุรกิจ</li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold mb-3">คุณสมบัติที่ต้องการ</h3>
-                <ul class="list-disc list-inside space-y-1 text-sm">
-                  <li>เชี่ยวชาญ Python (Pandas/Sklearn/Matplotlib) และ SQL</li>
-                  <li>ความรู้สถิติและ ML/Deep Learning</li>
-                  <li>เครื่องมือ BI เช่น Tableau/Power BI</li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold mb-3">สวัสดิการ</h3>
-                <ul class="list-disc list-inside space-y-1 text-sm">
-                  <li>อุปกรณ์วิเคราะห์ข้อมูลสเปคสูง</li>
-                  <li>Hybrid/WFH</li>
-                  <li>ประกันสุขภาพกลุ่ม</li>
-                </ul>
-              </div>
-            </div>`
-                }
-            };
-
-            // --- Navigation ---
-            const navLinks = $$('.nav-link');
-            const sections = $$('.page-section');
-            const mobileMenuBtn = $('#mobile-menu-button');
-            const mobileMenu = $('#mobile-menu');
-
-            function setActiveLink(targetId) {
-                navLinks.forEach(a => {
-                    if (a.dataset.target === targetId) { a.classList.add('active'); }
-                    else { a.classList.remove('active'); }
-                });
-            }
-
-            function showPage(targetId) {
-                sections.forEach(s => s.classList.remove('active'));
-                const target = document.getElementById(targetId) || document.getElementById('home');
-                target.classList.add('active');
-                setActiveLink(target.id);
-                mobileMenu.classList.add('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                if (location.hash.substring(1) !== target.id) { location.hash = target.id; }
-            }
-            window.showPage = showPage; // global
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', e => {
-                    e.preventDefault();
-                    showPage(link.dataset.target);
-                });
-            });
-
-            window.addEventListener('hashchange', () => {
-                const target = location.hash.substring(1) || 'home';
-                showPage(target);
-            });
-
-            const initial = location.hash.substring(1) || 'home';
-            showPage(initial);
-
-            mobileMenuBtn.addEventListener('click', () => {
-                const expanded = mobileMenu.classList.toggle('hidden');
-                mobileMenuBtn.setAttribute('aria-expanded', String(!expanded));
-            });
-
-            // --- Message Modal ---
-            const messageModal = $('#messageModal');
-            const modalText = $('#modalMessageText');
-            const modalClose = $('#modalCloseButton');
-
-            function openModal(el) { document.body.classList.add('no-scroll'); el.classList.remove('hidden'); }
-            function closeModal(el) { el.classList.add('hidden'); document.body.classList.remove('no-scroll'); }
-            function showMessage(msg) { modalText.textContent = msg; openModal(messageModal); }
-
-            modalClose.addEventListener('click', () => closeModal(messageModal));
-            messageModal.addEventListener('click', (e) => { if (e.target === messageModal) closeModal(messageModal); });
-            window.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeModal(messageModal); closeModal(jobModal); } });
-
-            // --- Job Detail Modal ---
-            const jobModal = $('#jobModal');
-            const jobModalTitle = $('#jobModalTitle');
-            const jobModalContent = $('#jobModalContent');
-            const jobModalClose = $('#jobModalClose');
-
-            $$('.job-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    const key = card.dataset.job;
-                    const detail = jobDetails[key];
-                    if (detail) {
-                        jobModalTitle.textContent = detail.title;
-                        jobModalContent.innerHTML = detail.content;
-                        openModal(jobModal);
-                    }
-                });
-            });
-            jobModalClose.addEventListener('click', () => closeModal(jobModal));
-            jobModal.addEventListener('click', (e) => { if (e.target === jobModal) closeModal(jobModal); });
-
-            // --- Course navigation ---
-            $$('.course-detail-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const pageId = `course-${btn.dataset.course}`;
-                    showPage(pageId);
-                });
-            });
-
-            // --- Validation Helpers ---
-            const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-            const phoneRe = /^0\d{9}$/; // ไทย: 10 หลักขึ้นต้นด้วย 0
-            const showError = (el, msg) => { el.classList.add('border-red-500'); el.nextElementSibling.textContent = msg; };
-            const clearError = (el) => { el.classList.remove('border-red-500'); el.nextElementSibling.textContent = ''; };
-
-            // Registration form
-            const regForm = $('#registrationForm');
-            regForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const f = regForm.elements;
-                const fields = [f.firstname, f.lastname, f.email, f.phone, f.education, f.address];
-                fields.forEach(clearError);
-                let ok = true;
-                if (!f.firstname.value.trim()) { showError(f.firstname, 'กรุณากรอกชื่อจริง'); ok = false; }
-                if (!f.lastname.value.trim()) { showError(f.lastname, 'กรุณากรอกนามสกุล'); ok = false; }
-                if (!f.email.value.trim()) { showError(f.email, 'กรุณากรอกอีเมล'); ok = false; }
-                else if (!emailRe.test(f.email.value)) { showError(f.email, 'รูปแบบอีเมลไม่ถูกต้อง'); ok = false; }
-                const normalizedPhone = f.phone.value.replace(/\D/g, '');
-                if (!normalizedPhone) { showError(f.phone, 'กรุณากรอกเบอร์โทรศัพท์'); ok = false; }
-                else if (!phoneRe.test(normalizedPhone)) { showError(f.phone, 'กรุณากรอกเบอร์โทรศัพท์ 10 หลัก (ขึ้นต้นด้วย 0)'); ok = false; }
-                if (!f.education.value) { showError(f.education, 'กรุณาเลือกระดับการศึกษา'); ok = false; }
-                if (!f.address.value.trim()) { showError(f.address, 'กรุณากรอกที่อยู่'); ok = false; }
-                if (ok) { showMessage('ส่งข้อมูลการลงทะเบียนเรียบร้อยแล้ว!'); regForm.reset(); }
-                else { showMessage('กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง'); }
-            });
-
-            // Contact form
-            const contactForm = $('#contactForm');
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const f = contactForm.elements;
-                const fields = [f.contact_name, f.contact_email, f.contact_subject];
-                fields.forEach(clearError);
-                let ok = true;
-                if (!f.contact_name.value.trim()) { showError(f.contact_name, 'กรุณากรอกชื่อ'); ok = false; }
-                if (!f.contact_email.value.trim()) { showError(f.contact_email, 'กรุณากรอกอีเมล'); ok = false; }
-                else if (!emailRe.test(f.contact_email.value)) { showError(f.contact_email, 'รูปแบบอีเมลไม่ถูกต้อง'); ok = false; }
-                if (!f.contact_subject.value.trim()) { showError(f.contact_subject, 'กรุณากรอกข้อความ'); ok = false; }
-                if (ok) { showMessage('ส่งข้อความของคุณเรียบร้อยแล้ว!'); contactForm.reset(); }
-            });
-        });
-
-        // --- Form Validation Helper Functions ---
-        function showError(inputElement, message) {
-            const errorElement = inputElement.nextElementSibling;
-            inputElement.classList.add('border-red-500');
-            errorElement.textContent = message;
-        }
-
-        function clearError(inputElement) {
-            const errorElement = inputElement.nextElementSibling;
-            inputElement.classList.remove('border-red-500');
-            errorElement.textContent = '';
-        }
-
-        function validateEmail(email) {
-            const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            return re.test(String(email).toLowerCase());
-        }
-
-        function validatePhone(phone) {
-            const re = /^[0-9]{10}$/;
-            return re.test(String(phone));
-        }
-
-
-        // --- Registration Form Validation ---
-        const regForm = document.getElementById('registrationForm');
-        regForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            let isValid = true;
-
-            const fields = {
-                fname: regForm.elements.firstname,
-                lname: regForm.elements.lastname,
-                email: regForm.elements.email,
-                phone: regForm.elements.phone,
-                education: regForm.elements.education,
-                address: regForm.elements.address,
-            };
-
-            // Clear previous errors
-            Object.values(fields).forEach(field => clearError(field));
-
-            // Validate First Name
-            if (fields.fname.value.trim() === '') {
-                showError(fields.fname, 'กรุณากรอกชื่อจริง');
-                isValid = false;
-            }
-
-            // Validate Last Name
-            if (fields.lname.value.trim() === '') {
-                showError(fields.lname, 'กรุณากรอกนามสกุล');
-                isValid = false;
-            }
-
-            // Validate Email
-            if (fields.email.value.trim() === '') {
-                showError(fields.email, 'กรุณากรอกอีเมล');
-                isValid = false;
-            } else if (!validateEmail(fields.email.value)) {
-                showError(fields.email, 'รูปแบบอีเมลไม่ถูกต้อง');
-                isValid = false;
-            }
-
-            // Validate Phone
-            if (fields.phone.value.trim() === '') {
-                showError(fields.phone, 'กรุณากรอกเบอร์โทรศัพท์');
-                isValid = false;
-            } else if (!validatePhone(fields.phone.value)) {
-                showError(fields.phone, 'กรุณากรอกเบอร์โทรศัพท์ 10 หลัก');
-                isValid = false;
-            }
-
-            // Validate Education
-            if (fields.education.value === '') {
-                showError(fields.education, 'กรุณาเลือกระดับการศึกษา');
-                isValid = false;
-            }
-
-            // Validate Address
-            if (fields.address.value.trim() === '') {
-                showError(fields.address, 'กรุณากรอกที่อยู่');
-                isValid = false;
-            }
-
-            if (isValid) {
-                showMessage('ส่งข้อมูลการลงทะเบียนเรียบร้อยแล้ว!');
-                regForm.reset();
-            } else {
-                showMessage('กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง');
-            }
-        });
-
-        // --- Contact Form Validation ---
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            let isValid = true;
-
-            const fields = {
-                name: contactForm.elements.contact_name,
-                email: contactForm.elements.contact_email,
-                subject: contactForm.elements.contact_subject,
-            };
-
-            Object.values(fields).forEach(field => clearError(field));
-
-            if (fields.name.value.trim() === '') {
-                showError(fields.name, 'กรุณากรอกชื่อ');
-                isValid = false;
-            }
-
-            if (fields.email.value.trim() === '') {
-                showError(fields.email, 'กรุณากรอกอีเมล');
-                isValid = false;
-            } else if (!validateEmail(fields.email.value)) {
-                showError(fields.email, 'รูปแบบอีเมลไม่ถูกต้อง');
-                isValid = false;
-            }
-
-            if (fields.subject.value.trim() === '') {
-                showError(fields.subject, 'กรุณากรอกข้อความ');
-                isValid = false;
-            }
-
-            if (isValid) {
-                showMessage('ส่งข้อความของคุณเรียบร้อยแล้ว!');
-                contactForm.reset();
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
