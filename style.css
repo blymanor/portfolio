@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-
+  /* ✅ เพิ่ม padding ข้างให้ไม่ชิดจอ */
   padding: 4rem clamp(1rem, 5vw, 3rem);
   position: relative;
   overflow: hidden;
@@ -80,8 +80,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
-  align-items: start;
-  justify-content: center;
+  align-items: center;
 
   padding: 0 clamp(1rem, 4vw, 2rem);
   position: relative;
@@ -97,7 +96,7 @@ body {
 
 .hero-left {
   display: flex;
-  flex-direction: flex-start;
+  flex-direction: column;
   gap: 1.25rem;
 }
 
@@ -257,10 +256,9 @@ body {
   color: #0d9488;
 }
 
-/* Profile Section /
+/* Profile Section (ขวา) */
 .profile-section {
   display: flex;
-  align-items: start;   
   justify-content: center;
 }
 .profile-container {
@@ -450,7 +448,6 @@ body {
   border-radius: 9999px;
   display: inline-block;
 }
-
 
 /* Education Section */
 .education-section {
