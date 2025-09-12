@@ -94,6 +94,46 @@ body {
   .hero-text{text-align:left;order:1;}
 }
 
+/* ----- Hero Buttons ----- */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+@media (min-width: 1024px) {
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+}
+
+.text-box {
+  position: relative;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  min-width: 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn.primary 
+{
+
 /* ----- Name & Intro ----- */
 .name-section { margin-bottom: 2rem; }
 .name-container { position: relative; margin-bottom: 1.5rem; }
