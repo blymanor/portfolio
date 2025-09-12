@@ -10,8 +10,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  color: #1e293b;           /* น้ำเงินเทาเข้ม */
-  background-color: #f7faff; /* ขาวอมฟ้า */
+  color: #1e293b;           
+  background-color: #f7faff; 
 }
 
 /* ===========================
@@ -51,14 +51,14 @@ body {
   left: 5rem;
   width: 16rem;
   height: 16rem;
-  background: rgba(37, 99, 235, 0.08); /* น้ำเงินจาง */
+  background: rgba(37, 99, 235, 0.08); 
 }
 .bg-circle-2 {
   bottom: 5rem;
   right: 5rem;
   width: 20rem;
   height: 20rem;
-  background: rgba(13, 148, 136, 0.08); /* ฟ้าอมเขียวจาง */
+  background: rgba(13, 148, 136, 0.08); 
   animation-delay: 1s;
 }
 .bg-circle-3 {
