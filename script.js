@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typingWrapper) {
         function changeJob() {
             currentJob = (currentJob + 1) % jobs.length;
-            const translateY = -currentJob * 2.5; // 2.5rem = 40px
+            const translateY = -currentJob * 3; // 3rem = 48px
             typingWrapper.style.transform = `translateY(${translateY}rem)`;
         }
         setInterval(changeJob, 3000);
