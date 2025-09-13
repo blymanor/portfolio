@@ -92,7 +92,23 @@ body {
   }
 }
 
-/* --------- Name --------- */
+/* --------- Intro & Name --------- */
+
+.nickname-highlight {
+  color: #0d9488;
+  font-weight: 600;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .nickname-highlight {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nickname-highlight {
+    font-size: 1.5rem;
+  }
+}
 
 .main-name {
   font-size: 1.75rem;
