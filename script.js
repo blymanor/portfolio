@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let currentJob = 0;
-  const jobs = ["UX/UI Designer", "Frontend Developer"];
+  const jobs = ["Frontend Developer", "UX/UI Designer"];
   const typingWrapper = document.getElementById("typingWrapper");
 
   if (typingWrapper) {
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Change job every 3 seconds
-    setInterval(changeJob, 3000);
+    setInterval(changeJob, 2000);
   }
 
   // Smooth scrolling for anchor links
