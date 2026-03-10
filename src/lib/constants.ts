@@ -90,7 +90,7 @@ export const PROJECTS: ProjectItem[] = [
     bgColor: C.accentSoft,
     prototype:
       "https://www.figma.com/proto/qwB5QsME8DZKC15corA6jA/Creative-AI-Club?page-id=1%3A3&node-id=900-2918&p=f&viewport=80%2C-24%2C0.11&t=TG77V510zocfHWVd-1&scaling=scale-down&content-scaling=fixed",
-    image: "${BASE_PATH}/assets/CAICAMP-Project.png",
+    image: `${BASE_PATH}/assets/CAICAMP-Project.png`,
   },
   {
     id: 2,
