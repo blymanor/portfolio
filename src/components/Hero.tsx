@@ -19,7 +19,7 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen flex flex-col justify-center pt-24 pb-20 relative overflow-hidden"
+      className="min-h-screen flex flex-col justify-center pt-20 pb-12 md:pt-24 md:pb-20 relative overflow-hidden"
       style={{ background: C.bg }}
     >
       {/* Decorative blobs */}
@@ -61,7 +61,7 @@ export default function Hero() {
             {/* Role ticker */}
             <motion.div
               variants={fadeUp(0)}
-              className="flex items-center gap-3 mb-10"
+              className="flex items-center gap-3 mb-6 md:mb-10"
             >
               <span
                 className="w-2 h-2 rounded-full animate-pulse shrink-0"
@@ -87,7 +87,7 @@ export default function Hero() {
             {/* Name */}
             <motion.h1
               variants={fadeUp(0.05)}
-              className="font-heading font-black leading-none mb-12"
+              className="font-heading font-black leading-none mb-8 md:mb-12"
               style={{
                 fontSize: "clamp(3rem, 7vw, 7.5rem)",
                 color: C.fg,
@@ -119,7 +119,7 @@ export default function Hero() {
             {/* Divider + bio + CTA */}
             <motion.div
               variants={fadeUp(0.1)}
-              className="pt-10 flex flex-col sm:flex-row sm:items-end justify-between gap-8"
+              className="pt-6 md:pt-10 flex flex-col sm:flex-row sm:items-end justify-between gap-6 md:gap-8"
               style={{ borderTop: `1px solid ${C.border}` }}
             >
               <p
@@ -133,7 +133,7 @@ export default function Hero() {
                 experience building AI prototypes, design systems, and
                 full-stack products.
               </p>
-              <div className="flex gap-3 shrink-0">
+              <div className="flex flex-wrap gap-3 shrink-0">
                 <a
                   href="#work"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:opacity-80"
@@ -142,7 +142,22 @@ export default function Hero() {
                     color: "#fff",
                   }}
                 >
-                  See my work ↗
+                  See my work
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="inline-block ml-1"
+                  >
+                    <path d="M7 17L17 7" />
+                    <path d="M7 7h10v10" />
+                  </svg>
                 </a>
                 <a
                   href="mailto:tipparida.ruji@gmail.com"

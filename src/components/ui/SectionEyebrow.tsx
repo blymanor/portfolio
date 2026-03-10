@@ -7,7 +7,7 @@ interface SectionEyebrowProps {
 
 export default function SectionEyebrow({ number, label }: SectionEyebrowProps) {
   return (
-    <div className="flex items-center gap-3 mb-14">
+    <div className="flex items-center gap-3 mb-8 md:mb-14">
       <span
         className="font-heading text-xs font-bold"
         style={{ color: C.accent }}

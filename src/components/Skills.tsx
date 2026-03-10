@@ -7,7 +7,11 @@ import { C, SKILLS_LEFT, SKILLS_RIGHT } from "@/lib/constants";
 
 export default function Skills() {
   return (
-    <section id="experience" className="py-32" style={{ background: C.fg }}>
+    <section
+      id="experience"
+      className="py-16 md:py-32"
+      style={{ background: C.fg }}
+    >
       <Container>
         <FadeUp>
           <SectionEyebrow number="02" label="Skills" />
@@ -47,7 +51,7 @@ export default function Skills() {
 
         <FadeUp delay={0.2}>
           <p
-            className="font-heading font-black mt-24 leading-tight"
+            className="font-heading font-black mt-14 md:mt-24 leading-tight"
             style={{
               fontSize: "clamp(2rem, 4.5vw, 4rem)",
               color: "#2A2A2A",

@@ -7,13 +7,13 @@ import { C, EXPERIENCE } from "@/lib/constants";
 
 export default function Experience() {
   return (
-    <section id="about" className="py-32" style={{ background: C.bg }}>
+    <section id="about" className="py-16 md:py-32" style={{ background: C.bg }}>
       <Container>
         <FadeUp>
           <SectionEyebrow number="01" label="Experience" />
         </FadeUp>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Left */}
           <FadeUp delay={0.05}>
             <h2
@@ -39,7 +39,7 @@ export default function Experience() {
 
             {/* Education card */}
             <div
-              className="rounded-2xl p-7 flex gap-5 items-start"
+              className="rounded-2xl p-5 md:p-7 flex gap-4 md:gap-5 items-start"
               style={{ background: C.accentSoft, border: "1px solid #FFD5CC" }}
             >
               <div
@@ -81,7 +81,7 @@ export default function Experience() {
             {EXPERIENCE.map((exp, i) => (
               <FadeUp key={i} delay={0.1 + i * 0.08}>
                 <div
-                  className="rounded-2xl p-7 transition-shadow duration-300 hover:shadow-lg"
+                  className="rounded-2xl p-5 md:p-7 transition-shadow duration-300 hover:shadow-lg"
                   style={{
                     background: exp.color,
                     border: `1px solid ${exp.dot}22`,
