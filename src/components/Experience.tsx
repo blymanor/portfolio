@@ -69,7 +69,7 @@ export default function Experience() {
                     color: C.accent,
                   }}
                 >
-                  GPAX 3.31 · 2022 – Present <br />
+                  2022 – Present <br />
                   Expected Graduation: 2026
                 </p>
               </div>
