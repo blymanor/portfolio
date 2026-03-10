@@ -173,7 +173,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Right: Profile photo */}
-          <div className="shrink-0 self-end hidden lg:block">
+          <div className="shrink-0 self-center lg:self-end">
             <motion.div
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
@@ -183,7 +183,7 @@ export default function Hero() {
                 ease: EASE,
               }}
             >
-              <div className="relative" style={{ width: "200px" }}>
+              <div className="relative" style={{ width: "160px" }}>
                 <div
                   className="absolute rounded-3xl"
                   style={{
@@ -195,10 +195,8 @@ export default function Hero() {
                 <img
                   src={`${BASE_PATH}/assets/self.png`}
                   alt="Tipparida"
-                  className="relative rounded-2xl object-cover object-top"
+                  className="relative rounded-2xl object-cover object-top w-[160px] h-[200px] lg:w-[200px] lg:h-[250px]"
                   style={{
-                    width: "200px",
-                    height: "250px",
                     border: "3px solid white",
                     boxShadow: "0 24px 64px rgba(0,0,0,0.10)",
                     display: "block",
