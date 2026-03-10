@@ -196,8 +196,8 @@ export default function Hero() {
                 <Image
                   src={`${BASE_PATH}/assets/self.png`}
                   alt="Tipparida"
-                  width={200}
-                  height={250}
+                  width={160}
+                  height={200}
                   className="relative rounded-2xl object-cover object-top w-40 h-50 lg:w-50 lg:h-62.5"
                   style={{
                     border: "3px solid white",
