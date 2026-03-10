@@ -153,10 +153,9 @@ export default function Hero() {
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="inline-block ml-1"
                   >
-                    <path d="M7 17L17 7" />
-                    <path d="M7 7h10v10" />
+                    <path d="M12 5v14" />
+                    <path d="m19 12-7 7-7-7" />
                   </svg>
                 </a>
                 <a
