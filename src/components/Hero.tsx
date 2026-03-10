@@ -89,7 +89,7 @@ export default function Hero() {
               variants={fadeUp(0.05)}
               className="font-heading font-black leading-none mb-8 md:mb-12"
               style={{
-                fontSize: "clamp(3rem, 7vw, 7.5rem)",
+                fontSize: "clamp(2rem, 10vw, 7.5rem)",
                 color: C.fg,
                 letterSpacing: "-0.03em",
               }}
