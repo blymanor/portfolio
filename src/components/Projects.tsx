@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import FadeUp from "@/components/ui/FadeUp";
 import SectionEyebrow from "@/components/ui/SectionEyebrow";
@@ -27,10 +28,11 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           style={{ background: project.bgColor }}
         >
           {project.image ? (
-            <img
+            <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
+              fill
+              className="object-cover object-top transition-transform duration-700 hover:scale-105"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
               }}

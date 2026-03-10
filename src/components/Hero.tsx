@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import { C, ROLES, BASE_PATH } from "@/lib/constants";
 import { fadeUp, EASE } from "@/lib/animations";
@@ -192,9 +193,11 @@ export default function Hero() {
                     borderRadius: "24px",
                   }}
                 />
-                <img
+                <Image
                   src={`${BASE_PATH}/assets/self.png`}
                   alt="Tipparida"
+                  width={160}
+                  height={200}
                   className="relative rounded-2xl object-cover object-top w-40 h-50 lg:w-50 lg:h-62.5"
                   style={{
                     border: "3px solid white",
