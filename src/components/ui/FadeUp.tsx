@@ -2,15 +2,7 @@
 
 import { useRef, type ReactNode } from "react";
 import { motion, useInView } from "framer-motion";
-
-const up = (delay: number = 0) => ({
-  hidden: { opacity: 0, y: 28 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] as const },
-  },
-});
+import { fadeUp } from "@/lib/animations";
 
 interface FadeUpProps {
   children: ReactNode;
@@ -28,7 +20,7 @@ export default function FadeUp({
   return (
     <motion.div
       ref={ref}
-      variants={up(delay)}
+      variants={fadeUp(delay)}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       className={className}

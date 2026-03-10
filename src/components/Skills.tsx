@@ -20,10 +20,7 @@ export default function Skills() {
                 <FadeUp key={gi} delay={gi * 0.05}>
                   <p
                     className="text-xs font-semibold uppercase tracking-[0.2em] mb-5"
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      color: ci === 0 ? C.accent : C.accent2,
-                    }}
+                    style={{ color: ci === 0 ? C.accent : C.accent2 }}
                   >
                     {group.label}
                   </p>
@@ -33,7 +30,6 @@ export default function Skills() {
                         key={item}
                         className="text-sm px-4 py-2 rounded-full font-medium transition-transform duration-200 hover:scale-105 cursor-default"
                         style={{
-                          fontFamily: "'DM Sans', sans-serif",
                           background: "#242424",
                           color: "#E0E0E0",
                           border: "1px solid #333",
@@ -51,9 +47,8 @@ export default function Skills() {
 
         <FadeUp delay={0.2}>
           <p
-            className="font-black mt-24 leading-tight"
+            className="font-heading font-black mt-24 leading-tight"
             style={{
-              fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(2rem, 4.5vw, 4rem)",
               color: "#2A2A2A",
               letterSpacing: "-0.02em",

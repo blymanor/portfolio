@@ -1,67 +1,58 @@
-# Personal Portfolio
+# Pleng — Portfolio
 
-> _Design → Code → Ship._ ✨
+Personal portfolio site — **Frontend Developer** & **UX/UI Designer**.
 
-My little corner of the internet — a portfolio site showcasing my work, skills, and journey as a **Frontend Developer** & **UX/UI Designer**.
+## Tech Stack
 
-![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-animations-FF0055?logo=framer&logoColor=white)
+- **Next.js 16** — App Router, static export
+- **TypeScript** — strict mode
+- **Tailwind CSS v4** — `@theme` tokens, utility-first
+- **Framer Motion** — scroll-triggered animations
+- **Syne + DM Sans** — Google Fonts
 
-## ⚡ Tech Stack
-
-| Layer          | Tech                                |
-| -------------- | ----------------------------------- |
-| **Framework**  | Next.js 16 (App Router + Turbopack) |
-| **Language**   | TypeScript                          |
-| **Styling**    | Tailwind CSS v4                     |
-| **Animations** | Framer Motion                       |
-| **Fonts**      | Syne + DM Sans (Google Fonts)       |
-
-## 🗂 Project Structure
+## Project Structure
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx        # Root layout + fonts
-│   ├── page.tsx          # Home page
-│   └── globals.css       # Tailwind + custom styles
+│   ├── layout.tsx          # Root layout + font loading
+│   ├── page.tsx            # Home (composes all sections)
+│   └── globals.css         # Tailwind config + base styles
 ├── components/
-│   ├── Nav.tsx           # Fixed navbar
-│   ├── Hero.tsx          # Hero section + role ticker
-│   ├── Experience.tsx    # Work experience + education
-│   ├── Skills.tsx        # Skills grid
-│   ├── Projects.tsx      # Project cards
-│   ├── Footer.tsx        # Contact CTA
-│   └── ui/               # Reusable UI primitives
-│       ├── Container.tsx
-│       ├── FadeUp.tsx
-│       ├── Tag.tsx
-│       └── SectionEyebrow.tsx
+│   ├── Nav.tsx             # Sticky navbar with scroll blur
+│   ├── Hero.tsx            # Hero section + animated role ticker
+│   ├── Experience.tsx      # Work experience + education cards
+│   ├── Skills.tsx          # Skills grid (dark section)
+│   ├── Projects.tsx        # Project cards with links
+│   ├── Footer.tsx          # Contact CTA
+│   └── ui/                 # Shared primitives
+│       ├── Container.tsx   # Max-width wrapper
+│       ├── FadeUp.tsx      # Scroll-reveal animation
+│       ├── SectionEyebrow.tsx
+│       └── Tag.tsx
 └── lib/
-    └── constants.ts      # Design tokens + data
+    ├── animations.ts       # Shared motion variants
+    └── constants.ts        # Design tokens + content data
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
-# Install dependencies
 npm install
-
-# Run dev server
 npm run dev
 ```
 
-Open **http://localhost:3000** and enjoy ✌️
+Open **http://localhost:3000**.
 
-## 🩷 About Me
+## Build & Deploy
 
-Hi! I'm **Pleng** — a CS student at Bangkok University who loves turning ideas into pixels and pixels into code. Currently interning as an AI Prototype Developer at CP ALL.
+```bash
+npm run build   # Static export → out/
+```
 
-- 📧 tipparida.ruji@gmail.com
-- 💼 [LinkedIn](https://linkedin.com/in/tipparida)
+Configured for GitHub Pages at `/portfolio` (see `next.config.mjs`).
 
----
+## Contact
 
-_Built with 🧡 and way too much coffee._
+- tipparida.ruji@gmail.com
+- [linkedin.com/in/tipparida](https://linkedin.com/in/tipparida)

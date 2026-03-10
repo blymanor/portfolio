@@ -13,9 +13,8 @@ export default function Footer() {
     >
       {/* Big bg letter */}
       <div
-        className="absolute bottom-0 right-0 leading-none select-none pointer-events-none font-black opacity-10"
+        className="absolute bottom-0 right-0 leading-none select-none pointer-events-none font-heading font-black opacity-10"
         style={{
-          fontFamily: "'Syne', sans-serif",
           fontSize: "30vw",
           color: "#fff",
           transform: "translate(10%, 20%)",
@@ -33,17 +32,13 @@ export default function Footer() {
         >
           <p
             className="text-sm font-semibold tracking-widest uppercase mb-8"
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              color: "rgba(255,255,255,0.65)",
-            }}
+            style={{ color: "rgba(255,255,255,0.65)" }}
           >
             Let&apos;s build something great
           </p>
           <h2
-            className="font-black leading-tight mb-14"
+            className="font-heading font-black leading-tight mb-14"
             style={{
-              fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(2.5rem, 6vw, 6rem)",
               color: "#fff",
               letterSpacing: "-0.03em",
@@ -61,7 +56,6 @@ export default function Footer() {
               style={{
                 background: "#fff",
                 color: C.accent,
-                fontFamily: "'DM Sans', sans-serif",
               }}
             >
               tipparida.ruji@gmail.com ↗
@@ -74,7 +68,6 @@ export default function Footer() {
               style={{
                 border: "2px solid rgba(255,255,255,0.35)",
                 color: "#fff",
-                fontFamily: "'DM Sans', sans-serif",
               }}
             >
               LinkedIn ↗
@@ -86,22 +79,13 @@ export default function Footer() {
             style={{ borderTop: "1px solid rgba(255,255,255,0.2)" }}
           >
             <span
-              className="font-black text-sm tracking-widest"
-              style={{
-                fontFamily: "'Syne', sans-serif",
-                color: "rgba(255,255,255,0.85)",
-              }}
+              className="font-heading font-black text-sm tracking-widest"
+              style={{ color: "rgba(255,255,255,0.85)" }}
             >
               PLENG.
             </span>
-            <p
-              className="text-sm"
-              style={{
-                color: "rgba(255,255,255,0.5)",
-                fontFamily: "'DM Sans', sans-serif",
-              }}
-            >
-              © 2025 Tipparida Rujisunkuntorn
+            <p className="text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
+              © 2026 Tipparida Rujisunkuntorn
             </p>
           </div>
         </motion.div>

@@ -3,16 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
-import { C, ROLES } from "@/lib/constants";
-
-const up = (delay: number = 0) => ({
-  hidden: { opacity: 0, y: 28 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] as const },
-  },
-});
+import { C, ROLES, BASE_PATH } from "@/lib/constants";
+import { fadeUp, EASE } from "@/lib/animations";
 
 export default function Hero() {
   const [roleIdx, setRoleIdx] = useState(0);
@@ -68,11 +60,11 @@ export default function Hero() {
           >
             {/* Role ticker */}
             <motion.div
-              variants={up(0)}
+              variants={fadeUp(0)}
               className="flex items-center gap-3 mb-10"
             >
               <span
-                className="w-2 h-2 rounded-full animate-pulse flex-shrink-0"
+                className="w-2 h-2 rounded-full animate-pulse shrink-0"
                 style={{ background: C.accent }}
               />
               <div className="overflow-hidden" style={{ height: "22px" }}>
@@ -82,12 +74,9 @@ export default function Hero() {
                     initial={{ y: 22, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -22, opacity: 0 }}
-                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 0.4, ease: EASE }}
                     className="block text-sm tracking-widest uppercase font-medium"
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      color: C.muted,
-                    }}
+                    style={{ color: C.muted }}
                   >
                     {ROLES[roleIdx]}
                   </motion.span>
@@ -97,10 +86,9 @@ export default function Hero() {
 
             {/* Name */}
             <motion.h1
-              variants={up(0.05)}
-              className="font-black leading-none mb-12"
+              variants={fadeUp(0.05)}
+              className="font-heading font-black leading-none mb-12"
               style={{
-                fontFamily: "'Syne', sans-serif",
                 fontSize: "clamp(3rem, 7vw, 7.5rem)",
                 color: C.fg,
                 letterSpacing: "-0.03em",
@@ -130,14 +118,13 @@ export default function Hero() {
 
             {/* Divider + bio + CTA */}
             <motion.div
-              variants={up(0.1)}
+              variants={fadeUp(0.1)}
               className="pt-10 flex flex-col sm:flex-row sm:items-end justify-between gap-8"
               style={{ borderTop: `1px solid ${C.border}` }}
             >
               <p
                 className="text-base leading-relaxed"
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
                   color: C.muted,
                   maxWidth: "400px",
                 }}
@@ -146,14 +133,13 @@ export default function Hero() {
                 experience building AI prototypes, design systems, and
                 full-stack products.
               </p>
-              <div className="flex gap-3 flex-shrink-0">
+              <div className="flex gap-3 shrink-0">
                 <a
                   href="#work"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:opacity-80"
                   style={{
                     background: C.accent,
                     color: "#fff",
-                    fontFamily: "'DM Sans', sans-serif",
                   }}
                 >
                   See my work ↗
@@ -164,7 +150,6 @@ export default function Hero() {
                   style={{
                     border: `1.5px solid ${C.border}`,
                     color: C.fg,
-                    fontFamily: "'DM Sans', sans-serif",
                   }}
                 >
                   Contact
@@ -174,14 +159,14 @@ export default function Hero() {
           </motion.div>
 
           {/* Right: Profile photo */}
-          <div className="flex-shrink-0 self-end hidden lg:block">
+          <div className="shrink-0 self-end hidden lg:block">
             <motion.div
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.9,
                 delay: 0.35,
-                ease: [0.22, 1, 0.36, 1],
+                ease: EASE,
               }}
             >
               <div className="relative" style={{ width: "200px" }}>
@@ -194,7 +179,7 @@ export default function Hero() {
                   }}
                 />
                 <img
-                  src="/assets/self.png"
+                  src={`${BASE_PATH}/assets/self.png`}
                   alt="Tipparida"
                   className="relative rounded-2xl object-cover object-top"
                   style={{
@@ -206,13 +191,12 @@ export default function Hero() {
                   }}
                 />
                 <div
-                  className="absolute font-black text-xs tracking-wider rounded-xl px-3 py-2"
+                  className="absolute font-heading font-black text-xs tracking-wider rounded-xl px-3 py-2"
                   style={{
                     bottom: "-14px",
                     right: "-14px",
                     background: C.lime,
                     color: C.fg,
-                    fontFamily: "'Syne', sans-serif",
                     whiteSpace: "nowrap",
                   }}
                 >

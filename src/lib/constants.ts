@@ -1,3 +1,7 @@
+// ─── Base Path ─────────────────────────────────────────────────────────────────
+export const BASE_PATH =
+  process.env.NODE_ENV === "production" ? "/portfolio" : "";
+
 // ─── Design Tokens ─────────────────────────────────────────────────────────────
 export const C = {
   bg: "#FAFAFA",
@@ -86,7 +90,7 @@ export const PROJECTS: ProjectItem[] = [
     bgColor: C.accentSoft,
     prototype:
       "https://www.figma.com/proto/qwB5QsME8DZKC15corA6jA/Creative-AI-Club?page-id=1%3A3&node-id=900-2918&p=f&viewport=80%2C-24%2C0.11&t=TG77V510zocfHWVd-1&scaling=scale-down&content-scaling=fixed",
-    image: null,
+    image: "${BASE_PATH}/assets/CAiCAMP-Project.png",
   },
   {
     id: 2,
@@ -100,7 +104,7 @@ export const PROJECTS: ProjectItem[] = [
     bgColor: C.accent2Soft,
     prototype: "https://www.figma.com/proto/mWFOxUqXToT4DbF7TKxukN/MoodKit",
     github: "https://github.com/blymanor/MoodKitApp.git",
-    image: "/assets/MoodKit-Project.png",
+    image: `${BASE_PATH}/assets/MoodKit-Project.png`,
   },
   {
     id: 3,
@@ -114,7 +118,7 @@ export const PROJECTS: ProjectItem[] = [
     bgColor: "#F0FDF4",
     prototype: "https://blymanor.github.io/miniproject_cs319/",
     github: "https://github.com/blymanor/miniproject_cs319.git",
-    image: "/assets/Techtalent-Project.png",
+    image: `${BASE_PATH}/assets/Techtalent-Project.png`,
   },
   {
     id: 4,
@@ -127,7 +131,7 @@ export const PROJECTS: ProjectItem[] = [
     accentColor: "#D97706",
     bgColor: "#FFFBEB",
     prototype: "https://www.figma.com/proto/DMSoDpl0Otf9rrxDDZvngD/GetHealthy",
-    image: "/assets/GetHealthy-Project.png",
+    image: `${BASE_PATH}/assets/GetHealthy-Project.png`,
   },
   {
     id: 5,
@@ -141,7 +145,7 @@ export const PROJECTS: ProjectItem[] = [
     bgColor: "#F0F9FF",
     prototype:
       "https://www.figma.com/proto/LCntHv7Pl5A87pPvBDmcDR/Health-hub?page-id=1%3A3&node-id=1-288&p=f&viewport=97%2C-248%2C0.11&t=VNISNgMZXePifb5X-1&scaling=scale-down&content-scaling=fixed",
-    image: "/assets/Healthhub-Project.png",
+    image: `${BASE_PATH}/assets/Healthhub-Project.png`,
   },
 ];
 

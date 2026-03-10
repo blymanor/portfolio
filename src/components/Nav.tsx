@@ -28,14 +28,14 @@ export default function Nav() {
     >
       <Container className="flex items-center justify-between py-5">
         <span
-          className="font-black text-sm tracking-widest"
-          style={{ fontFamily: "'Syne', sans-serif", color: C.fg }}
+          className="font-heading font-black text-sm tracking-widest"
+          style={{ color: C.fg }}
         >
           PLENG<span style={{ color: C.accent }}>.</span>
         </span>
         <div
           className="hidden md:flex gap-8 text-sm"
-          style={{ fontFamily: "'DM Sans', sans-serif", color: C.muted }}
+          style={{ color: C.muted }}
         >
           {["About", "Experience", "Work", "Contact"].map((item) => (
             <a

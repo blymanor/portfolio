@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-heading: "Syne", sans-serif;
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -10,6 +14,7 @@
   }
 
   body {
+    font-family: "DM Sans", sans-serif;
     background: #fafafa;
     color: #141414;
     -webkit-font-smoothing: antialiased;

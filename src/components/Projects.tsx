@@ -23,7 +23,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       >
         {/* Image */}
         <div
-          className="relative overflow-hidden flex-shrink-0"
+          className="relative overflow-hidden shrink-0"
           style={{ height: "220px", background: project.bgColor }}
         >
           {project.image ? (
@@ -32,15 +32,14 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               alt={project.title}
               className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
               onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
+                e.currentTarget.style.display = "none";
               }}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
               <span
-                className="font-black opacity-10"
+                className="font-heading font-black opacity-10"
                 style={{
-                  fontFamily: "'Syne', sans-serif",
                   fontSize: "6rem",
                   color: project.accentColor,
                 }}
@@ -60,7 +59,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               style={{
                 background: "rgba(0,0,0,0.18)",
                 color: "#fff",
-                fontFamily: "'DM Sans', sans-serif",
               }}
             >
               {project.year}
@@ -71,9 +69,8 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         {/* Content */}
         <div className="p-8 flex flex-col flex-1 gap-5">
           <h3
-            className="font-black text-xl"
+            className="font-heading font-black text-xl"
             style={{
-              fontFamily: "'Syne', sans-serif",
               color: C.fg,
               letterSpacing: "-0.02em",
             }}
@@ -82,7 +79,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           </h3>
           <p
             className="text-sm leading-relaxed flex-1"
-            style={{ fontFamily: "'DM Sans', sans-serif", color: C.muted }}
+            style={{ color: C.muted }}
           >
             {project.description}
           </p>
@@ -94,7 +91,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                 style={{
                   background: project.accentColor + "18",
                   color: project.accentColor,
-                  fontFamily: "'DM Sans', sans-serif",
                 }}
               >
                 {t}
@@ -111,7 +107,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                 style={{
                   background: project.accentColor,
                   color: "#fff",
-                  fontFamily: "'DM Sans', sans-serif",
                 }}
               >
                 View Prototype ↗
@@ -126,7 +121,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                 style={{
                   border: `1.5px solid ${C.fg}30`,
                   color: C.fg,
-                  fontFamily: "'DM Sans', sans-serif",
                 }}
               >
                 GitHub ↗
@@ -148,9 +142,8 @@ export default function Projects() {
         </FadeUp>
         <FadeUp delay={0.05}>
           <h2
-            className="font-black mb-20 leading-tight"
+            className="font-heading font-black mb-20 leading-tight"
             style={{
-              fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(2.5rem, 5.5vw, 5rem)",
               color: C.fg,
               letterSpacing: "-0.03em",
