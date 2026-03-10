@@ -80,7 +80,7 @@ export const PROJECTS: ProjectItem[] = [
     year: "2026",
     tag: "Web · Full-stack",
     description:
-      "Rebuilt the department's internal website end-to-end — UX research, Figma, Next.js + TypeScript frontend, and Sanity CMS integration so non-devs can manage content independently.",
+      "Rebuilt the department's internal website end-to-end. Built during internship — from UX design to development, so the content team can update everything themselves without needing a developer.",
     tools: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity CMS"],
     accentColor: C.accent,
     bgColor: C.accentSoft,
@@ -128,6 +128,20 @@ export const PROJECTS: ProjectItem[] = [
     bgColor: "#FFFBEB",
     prototype: "https://www.figma.com/proto/DMSoDpl0Otf9rrxDDZvngD/GetHealthy",
     image: "/assets/GetHealthy-Project.png",
+  },
+  {
+    id: 5,
+    title: "Health Hub",
+    year: "2023",
+    tag: "Mobile · UX/UI",
+    description:
+      "A comprehensive health-monitoring platform prototype offering intuitive dashboards and concise data summaries, making complex health information easy to follow.",
+    tools: ["Figma"],
+    accentColor: "#0EA5E9",
+    bgColor: "#F0F9FF",
+    prototype:
+      "https://www.figma.com/proto/LCntHv7Pl5A87pPvBDmcDR/Health-hub?page-id=1%3A3&node-id=1-288&p=f&viewport=97%2C-248%2C0.11&t=VNISNgMZXePifb5X-1&scaling=scale-down&content-scaling=fixed",
+    image: "/assets/Healthhub-Project.png",
   },
 ];
 
