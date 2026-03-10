@@ -55,4 +55,4 @@ Configured for GitHub Pages at `/portfolio` (see `next.config.mjs`).
 ## Contact
 
 - tipparida.ruji@gmail.com
-- [linkedin.com/in/tipparida](https://linkedin.com/in/tipparida)
+- [linkedin.com/in/tipparida](http://linkedin.com/in/tipparida-rujisunkuntorn-038103384)

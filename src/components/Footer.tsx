@@ -76,7 +76,7 @@ export default function Footer() {
               <span className="truncate">tipparida.ruji@gmail.com</span>
             </a>
             <a
-              href="https://linkedin.com/in/tipparida"
+              href="http://linkedin.com/in/tipparida-rujisunkuntorn-038103384"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:bg-white hover:bg-opacity-10 w-full sm:w-auto"
