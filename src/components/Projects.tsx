@@ -1,10 +1,16 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import Container from "@/components/ui/Container";
 import FadeUp from "@/components/ui/FadeUp";
 import SectionEyebrow from "@/components/ui/SectionEyebrow";
 import Tag from "@/components/ui/Tag";
-import { C, PROJECTS, type ProjectItem } from "@/lib/constants";
+import {
+  C,
+  PROJECTS,
+  PROJECTS_PER_PAGE,
+  type ProjectItem,
+} from "@/lib/constants";
 
 interface ProjectCardProps {
   project: ProjectItem;
@@ -88,10 +94,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           >
             {project.title}
           </h3>
-          <p
-            className="text-sm leading-relaxed"
-            style={{ color: C.muted }}
-          >
+          <p className="text-sm leading-relaxed" style={{ color: C.muted }}>
             {project.description}
           </p>
           {project.highlights && project.highlights.length > 0 && (
@@ -190,6 +193,19 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 }
 
 export default function Projects() {
+  const [page, setPage] = useState(0);
+  const totalPages = Math.ceil(PROJECTS.length / PROJECTS_PER_PAGE);
+
+  const pageItems = useMemo(() => {
+    const start = page * PROJECTS_PER_PAGE;
+    return PROJECTS.slice(start, start + PROJECTS_PER_PAGE);
+  }, [page]);
+
+  const goTo = (next: number) => {
+    setPage(next);
+    document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section id="work" className="py-16 md:py-32" style={{ background: C.bg }}>
       <Container>
@@ -211,10 +227,68 @@ export default function Projects() {
           </h2>
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-          {PROJECTS.map((p, i) => (
+          {pageItems.map((p, i) => (
             <ProjectCard key={p.id} project={p} index={i} />
           ))}
         </div>
+
+        {totalPages > 1 && (
+          <div className="mt-10 md:mt-14 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-sm" style={{ color: C.muted }}>
+              Page {page + 1} of {totalPages}
+              <span className="mx-2 opacity-40">·</span>
+              {PROJECTS.length} projects
+            </p>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => goTo(Math.max(0, page - 1))}
+                disabled={page === 0}
+                className="px-4 py-2 rounded-full text-sm font-semibold transition-opacity disabled:opacity-30 disabled:cursor-not-allowed hover:opacity-80"
+                style={{
+                  border: `1.5px solid ${C.border}`,
+                  color: C.fg,
+                  background: "#fff",
+                }}
+                aria-label="Previous page"
+              >
+                Prev
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => goTo(i)}
+                  className="w-9 h-9 rounded-full text-sm font-semibold transition-all"
+                  style={{
+                    background: page === i ? C.accent : "transparent",
+                    color: page === i ? "#fff" : C.muted,
+                    border:
+                      page === i ? "none" : `1.5px solid ${C.border}`,
+                  }}
+                  aria-label={`Page ${i + 1}`}
+                  aria-current={page === i ? "page" : undefined}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button
+                type="button"
+                onClick={() => goTo(Math.min(totalPages - 1, page + 1))}
+                disabled={page >= totalPages - 1}
+                className="px-4 py-2 rounded-full text-sm font-semibold transition-opacity disabled:opacity-30 disabled:cursor-not-allowed hover:opacity-80"
+                style={{
+                  border: `1.5px solid ${C.border}`,
+                  color: C.fg,
+                  background: "#fff",
+                }}
+                aria-label="Next page"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        )}
       </Container>
     </section>
   );

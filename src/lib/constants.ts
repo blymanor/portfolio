@@ -214,7 +214,64 @@ export const PROJECTS: ProjectItem[] = [
       "https://www.figma.com/proto/qwB5QsME8DZKC15corA6jA/Creative-AI-Club?page-id=1%3A3&node-id=900-2918&p=f&viewport=80%2C-24%2C0.11&t=TG77V510zocfHWVd-1&scaling=scale-down&content-scaling=fixed",
     image: `${BASE_PATH}/assets/CAICAMP-Project.png`,
   },
+  {
+    id: 6,
+    title: "Moodkit App",
+    year: "2025",
+    tag: "Mobile App · Full-stack",
+    description:
+      "A mood-tracking app built end-to-end — from pain-point discovery and UX research through Figma prototyping to production with .NET MAUI.",
+    tools: ["Figma", ".NET MAUI", "C#", "XAML"],
+    accentColor: C.accent2,
+    bgColor: C.accent2Soft,
+    prototype: "https://www.figma.com/proto/mWFOxUqXToT4DbF7TKxukN/MoodKit",
+    github: "https://github.com/blymanor/MoodKitApp.git",
+    image: `${BASE_PATH}/assets/MoodKit-Project.png`,
+  },
+  {
+    id: 7,
+    title: "TechTalent",
+    year: "2024",
+    tag: "Web · Frontend",
+    description:
+      "A job-application website with clean UI and smooth modal forms — built to make browsing openings and applying effortless.",
+    tools: ["Figma", "HTML", "CSS", "JavaScript"],
+    accentColor: "#16A34A",
+    bgColor: "#F0FDF4",
+    prototype: "https://blymanor.github.io/miniproject_cs319/",
+    github: "https://github.com/blymanor/miniproject_cs319.git",
+    image: `${BASE_PATH}/assets/Techtalent-Project.png`,
+  },
+  {
+    id: 8,
+    title: "GetHealthy",
+    year: "2023",
+    tag: "Mobile · UX/UI",
+    description:
+      "A health & wellness mobile prototype guiding users through daily habits with clear goal-tracking screens and simple navigation.",
+    tools: ["Figma"],
+    accentColor: "#D97706",
+    bgColor: "#FFFBEB",
+    prototype: "https://www.figma.com/proto/DMSoDpl0Otf9rrxDDZvngD/GetHealthy",
+    image: `${BASE_PATH}/assets/GetHealthy-Project.png`,
+  },
+  {
+    id: 9,
+    title: "Health Hub",
+    year: "2023",
+    tag: "Mobile · UX/UI",
+    description:
+      "A comprehensive health-monitoring platform prototype offering intuitive dashboards and concise data summaries, making complex health information easy to follow.",
+    tools: ["Figma"],
+    accentColor: "#0EA5E9",
+    bgColor: "#F0F9FF",
+    prototype:
+      "https://www.figma.com/proto/LCntHv7Pl5A87pPvBDmcDR/Health-hub?page-id=1%3A3&node-id=1-288&p=f&viewport=97%2C-248%2C0.11&t=VNISNgMZXePifb5X-1&scaling=scale-down&content-scaling=fixed",
+    image: `${BASE_PATH}/assets/Healthhub-Project.png`,
+  },
 ];
+
+export const PROJECTS_PER_PAGE = 4;
 
 export const SKILLS_LEFT: SkillGroup[] = [
   {
