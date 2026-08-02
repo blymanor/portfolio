@@ -126,12 +126,12 @@ export default function Hero() {
                 className="text-base leading-relaxed"
                 style={{
                   color: C.muted,
-                  maxWidth: "400px",
+                  maxWidth: "440px",
                 }}
               >
-                Developer passionate about UI/UX and web — with hands-on
-                experience building AI prototypes, design systems, and
-                full-stack products.
+                AI Business Partner who turns business needs into working
+                systems — analysis, AI solution design, full-stack build,
+                deploy, and adoption inside the organization.
               </p>
               <div className="flex flex-wrap gap-3 shrink-0">
                 <a
@@ -193,7 +193,7 @@ export default function Hero() {
                   }}
                 />
                 <img
-                  src={`${BASE_PATH}/assets/self.png`}
+                  src={`${BASE_PATH}/assets/self.jpg`}
                   alt="Tipparida"
                   className="relative rounded-2xl object-cover object-top w-40 h-50 lg:w-50 lg:h-62.5"
                   style={{

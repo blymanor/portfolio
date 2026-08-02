@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tipparida Rujisunkuntorn — Portfolio",
+  title: "Tipparida Rujisunkuntorn — AI Business Development",
   description:
-    "Frontend Developer & UX/UI Designer passionate about building intuitive interfaces and full-stack products.",
+    "AI Business Partner — business analysis, AI solution design, and full-stack delivery from requirements to organizational adoption.",
 };
 
 export default function RootLayout({

@@ -24,17 +24,18 @@ export default function Experience() {
                 letterSpacing: "-0.02em",
               }}
             >
-              From design to
+              From problem to
               <br />
-              <span style={{ color: C.accent }}>deployment.</span>
+              <span style={{ color: C.accent }}>production AI.</span>
             </h2>
             <p
               className="text-base leading-relaxed mb-10"
               style={{ color: C.muted }}
             >
-              I&apos;m Pleng — a developer who owns the whole process: UX
-              research, Figma, code, and CMS. Currently interning as an AI
-              Prototype Developer at CP ALL.
+              I&apos;m Pleng — AI Business Partner at Wire &amp; Wireless
+              (True Group). I sit between business and engineering: find AI
+              use cases, design the solution, build the app, ship it, then
+              help people actually use it.
             </p>
 
             {/* Education card */}
@@ -61,7 +62,7 @@ export default function Experience() {
                     color: C.muted,
                   }}
                 >
-                  B.Sc. Computer Science · 4th Year
+                  B.Sc. Computer Science · GPAX 3.29
                 </p>
                 <p
                   className="text-sm font-medium mt-1"
@@ -69,8 +70,9 @@ export default function Experience() {
                     color: C.accent,
                   }}
                 >
-                  2022 – Present <br />
-                  Expected Graduation: 2026
+                  2022 – Jun 2026
+                  <br />
+                  Second-class honors
                 </p>
               </div>
             </div>

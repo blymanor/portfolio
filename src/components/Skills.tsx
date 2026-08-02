@@ -58,7 +58,7 @@ export default function Skills() {
               letterSpacing: "-0.02em",
             }}
           >
-            Design → Code → <span style={{ color: C.lime }}>Ship.</span>
+            Analyze → Build → <span style={{ color: C.lime }}>Adopt.</span>
           </p>
         </FadeUp>
       </Container>
