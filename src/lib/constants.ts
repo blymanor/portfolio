@@ -210,8 +210,7 @@ export const PROJECTS: ProjectItem[] = [
     tools: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity CMS", "Figma"],
     accentColor: C.accent,
     bgColor: C.accentSoft,
-    prototype:
-      "https://www.figma.com/proto/qwB5QsME8DZKC15corA6jA/Creative-AI-Club?page-id=1%3A3&node-id=900-2918&p=f&viewport=80%2C-24%2C0.11&t=TG77V510zocfHWVd-1&scaling=scale-down&content-scaling=fixed",
+    prototype: "https://caicamp.vercel.app/",
     image: `${BASE_PATH}/assets/CAICAMP-Project.png`,
   },
   {
@@ -221,6 +220,10 @@ export const PROJECTS: ProjectItem[] = [
     tag: "Mobile App · Full-stack",
     description:
       "A mood-tracking app built end-to-end — from pain-point discovery and UX research through Figma prototyping to production with .NET MAUI.",
+    highlights: [
+      "Ran UX research and Figma flows first, then shipped a cross-platform .NET MAUI client in C# / XAML.",
+      "Daily mood logging with history views so users can spot patterns and reflect over time.",
+    ],
     tools: ["Figma", ".NET MAUI", "C#", "XAML"],
     accentColor: C.accent2,
     bgColor: C.accent2Soft,
