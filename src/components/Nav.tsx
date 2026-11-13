@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 import { C } from "@/lib/constants";
 
-const NAV_ITEMS = ["About", "Experience", "Work", "Contact"];
+const NAV_ITEMS = ["About", "Experience", "Work"];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);

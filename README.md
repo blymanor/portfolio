@@ -24,7 +24,7 @@ src/
 │   ├── Experience.tsx      # Work experience + education cards
 │   ├── Skills.tsx          # Skills grid (dark section)
 │   ├── Projects.tsx        # Project cards with links
-│   ├── Footer.tsx          # Contact CTA
+│   ├── Footer.tsx          # Branding and copyright
 │   └── ui/                 # Shared primitives
 │       ├── Container.tsx   # Max-width wrapper
 │       ├── FadeUp.tsx      # Scroll-reveal animation
@@ -51,8 +51,3 @@ npm run build   # Static export → out/
 ```
 
 Configured for GitHub Pages at `/portfolio` (see `next.config.mjs`).
-
-## Contact
-
-- tipparida.ruji@gmail.com
-- [linkedin.com/in/tipparida](http://linkedin.com/in/tipparida-rujisunkuntorn-038103384)

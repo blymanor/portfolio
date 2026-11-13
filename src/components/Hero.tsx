@@ -158,16 +158,6 @@ export default function Hero() {
                     <path d="m19 12-7 7-7-7" />
                   </svg>
                 </a>
-                <a
-                  href="mailto:tipparida.ruji@gmail.com"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-colors hover:bg-neutral-100"
-                  style={{
-                    border: `1.5px solid ${C.border}`,
-                    color: C.fg,
-                  }}
-                >
-                  Contact
-                </a>
               </div>
             </motion.div>
           </motion.div>
