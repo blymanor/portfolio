@@ -326,6 +326,6 @@ export const SKILLS_RIGHT: SkillGroup[] = [
   },
   {
     label: "Languages",
-    items: ["Thai — Native", "English — CEFR B2"],
+    items: ["Thai — Native", "English — Intermediate"],
   },
 ];

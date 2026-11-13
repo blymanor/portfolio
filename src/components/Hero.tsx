@@ -84,8 +84,9 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Name */}
+            {/* Journal title */}
             <motion.h1
+              aria-label="Journal of TR."
               variants={fadeUp(0.05)}
               className="font-heading font-black leading-none mb-8 md:mb-12"
               style={{
@@ -94,7 +95,7 @@ export default function Hero() {
                 letterSpacing: "-0.03em",
               }}
             >
-              TIPPARIDA
+              Journal
               <br />
               <span
                 style={{
@@ -102,18 +103,9 @@ export default function Hero() {
                   color: "transparent",
                 }}
               >
-                RUJISUN
+                of TR
               </span>
-              <span style={{ color: C.accent }}>—</span>
-              <br />
-              <span
-                style={{
-                  WebkitTextStroke: `2px ${C.fg}`,
-                  color: "transparent",
-                }}
-              >
-                KUNTORN
-              </span>
+              <span style={{ color: C.accent }}>.</span>
             </motion.h1>
 
             {/* Divider + bio + CTA */}
